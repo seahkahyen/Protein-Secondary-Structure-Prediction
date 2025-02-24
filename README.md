@@ -6,7 +6,7 @@ This project explores the application of **deep learning** in **Protein Secondar
 By integrating **sequence-to-sequence modeling**, **long-range dependencies**, and **local pattern recognition**, our model achieves **high prediction accuracy** while maintaining computational efficiency.
 
 ## 🗂️ Dataset
-We use a **protein sequence dataset** containing:
+A **protein sequence dataset** obtained from [Kaggle](https://www.kaggle.com/datasets/alfrandom/protein-secondary-structure) is used:
 - **[seq]** - Amino acid sequence of peptides
 - **[sst3]** - Three-state secondary structure classification (helix, strand, coil)
 - **[sst8]** - Eight-state secondary structure classification
@@ -19,12 +19,12 @@ We use a **protein sequence dataset** containing:
 ### 🛠️ **Data Preprocessing**
 
 #### **1️⃣ Tokenization (N-gram Encoding)**
-- We use **3-gram tokenization**, breaking each protein sequence into overlapping **n-grams** (n=3).
-- **Why n=3?** Research suggests a sliding window of 3 captures structural and biochemical patterns effectively.
+- **3-gram tokenization**, breaking each protein sequence into overlapping **n-grams** (n=3).
+- n = 3 is used as research suggests a sliding window of 3 captures structural and biochemical patterns effectively.
 - Each unique **3-gram** is mapped to an integer using TensorFlow’s `Tokenizer()`.
 
 #### **2️⃣ Padding Sequences**
-- Since sequences vary in length, we **pad** them to a fixed length of **192** to ensure uniform input dimensions.
+- Since sequences vary in length, sequences are **padded** to a fixed length of **192** to ensure uniform input dimensions.
 - Padding is applied **post-sequence** to preserve original ordering.
 
 #### **3️⃣ Encoding Target Labels (SST3 & SST8)**
@@ -40,7 +40,7 @@ We use a **protein sequence dataset** containing:
 Let me know if you need any modifications! 🚀
 
 ## 🏗️ Proposed Model Architecture
-We implemented and tested **two architectures**:
+**Two architectures** are implemented and tested:
 
 ### 1️⃣ **Base Model** (Transformer-only)
 🔹 **Architecture of Base Transformer Model** 
@@ -57,7 +57,7 @@ We implemented and tested **two architectures**:
 ### 2️⃣ **Improved Model** (CNN-RNN-Transformer) 
 🔹 **Architecture of CNN-RNN-Transformer Model**  
 ![Model Architecture Improved](images/lstmcnn.png)
-To enhance performance, we integrated additional layers into our base **Transformer** architecture:  
+To enhance performance, additional layers are integrated into the base **Transformer** architecture:  
 - **1D CNN**: Captures local sequence patterns.  
 - **Bidirectional LSTM**: Preserves sequential dependencies.  
 
