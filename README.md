@@ -1,7 +1,7 @@
 # 🧬 Deep Learning for Protein Structure Prediction
 
 ## 📌 Project Overview
-This project explores the application of **deep learning** in **Protein Secondary Structure Prediction (PSSP)**. We developed a state-of-the-art machine learning model, utilising **Transformers, CNNs, and RNNs**, to predict secondary structures (SST3 & SST8) of proteins from their amino acid sequences.
+This project explores the application of **deep learning** in **Protein Secondary Structure Prediction (PSSP)** using a state-of-the-art machine learning model, integrating **Transformers, CNNs, and RNNs** to predict secondary structures (SST3 & SST8) of proteins from their amino acid sequences.
 
 By integrating **sequence-to-sequence modeling**, **long-range dependencies**, and **local pattern recognition**, our model achieves **high prediction accuracy** while maintaining computational efficiency.
 
