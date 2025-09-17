@@ -37,7 +37,6 @@ A **protein sequence dataset** obtained from [Kaggle](https://www.kaggle.com/dat
 
 ---
 
-Let me know if you need any modifications! 🚀
 
 ## 🏗️ Proposed Model Architecture
 **Two architectures** are implemented and tested:
